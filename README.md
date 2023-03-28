@@ -39,11 +39,11 @@
 
 sudo apt install default-jdk
 
-![screen1](https://github.com/KorolkovDenis/)
+![screen1](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work1/screen1.png)
 
 jdb -version
 
-![screen2](https://github.com/KorolkovDenis/)
+![screen2](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work1/screen2.png)
 
 Подготавливаем основу для Jenkins:
 
@@ -58,7 +58,7 @@ wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key 
 
 Устанавливаем Jenkins: sudo apt install jenkins
 
-![screen3](https://github.com/KorolkovDenis/)
+![screen3](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work1/screen3.png)
 
 Разрешаем автозапуск сервиса: systemctl enable jenkins
 
@@ -66,21 +66,21 @@ wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key 
 
 Возьмем пароль для входа в файле: /var/lib/jenkins/secrets/initialAdminPassword
 
-![screen4](https://github.com/KorolkovDenis/)
+![screen4](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work1/screen4.png)
 
 Устанавливаем go:
 1.	Скачиваем архив: go1.20.2.linux-amd64.tar.gz
 wget https://go.dev/dl/go1.20.2.linux-amd64.tar.gz
 
-![screen5](https://github.com/KorolkovDenis/)
+![screen5](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work1/screen5.png)
 
 2.	Если есть, удаляем все предыдущие установки Go, удалив папку /usr/local/go (если она существует), затем извлеките архив, который вы только что загрузили, в /usr/local, создав новое дерево Go в /usr/local/go:: 
 
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.20.2.linux-amd64.tar.gz
 
-![screen6](https://github.com/KorolkovDenis/)
+![screen6](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work1/screen6.png)
 
-![screen7](https://github.com/KorolkovDenis/)
+![screen7](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work1/screen7.png)
 
 Добавим /usr/local/go/bin в переменную окружения PATH, добавив следующую строку в свой $HOME/.profile или /etc/profile (для общесистемной установки):
 
@@ -88,7 +88,7 @@ export PATH=$PATH:/usr/local/go/bin
 
 go version 	- проверим какая у нас установлена версия go
 
-![screen8](https://github.com/KorolkovDenis/)
+![screen8](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work1/screen8.png)
 
 Тут бы нам еще доставить docker:
 
@@ -132,23 +132,23 @@ Fork репозитория на github:
 
 https://github.com/KorolkovDenis/sdvps-materials.git
 
-![screen9](https://github.com/KorolkovDenis/)
+![screen9](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work1/screen9.png)
 
 Ломимся на вебку Jenkins: на момент первого входа IP: 192.168.43.111:8080
 
 Берем пароль с файла /var/lib/jenkins/secrets/initialAdminPassword
 
-![screen10](https://github.com/KorolkovDenis/)
-![screen11](https://github.com/KorolkovDenis/)
-![screen12](https://github.com/KorolkovDenis/)
-![screen13](https://github.com/KorolkovDenis/)
-![screen14](https://github.com/KorolkovDenis/)
-![screen15](https://github.com/KorolkovDenis/)
+![screen10](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work1/screen10.png)
+![screen11](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work1/screen11.png)
+![screen12](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work1/screen12.png)
+![screen13](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work1/screen13.png)
+![screen14](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work1/screen14.png)
+![screen15](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work1/screen15.png)
 
 Создаю в jenkins Freestyle Project, подключаю получившийся репозиторий к нему и произвожу запуск тестов и сборку проекта go test . и docker build ..
 
-![screen16](https://github.com/KorolkovDenis/)
-![screen17](https://github.com/KorolkovDenis/)
+![screen16](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work1/screen16.png)
+![screen17](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work1/screen17.png)
 
 Шаги сборки - Выполнить команду shell (Execute shell)
 
@@ -158,14 +158,14 @@ https://github.com/KorolkovDenis/sdvps-materials.git
 
 docker build . -t ubuntu-bionic:8082/hello-world:v$BUILD_NUMBER
 
-![screen18](https://github.com/KorolkovDenis/)
+![screen18](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work1/screen18.png)
 
 Сохраняем конфиг и запускаем: Собрать сейчас
 
-![screen19](https://github.com/KorolkovDenis/)
-![screen20](https://github.com/KorolkovDenis/)
-![screen21](https://github.com/KorolkovDenis/)
-![screen22](https://github.com/KorolkovDenis/)
+![screen19](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work1/screen19.png)
+![screen20](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work1/screen20.png)
+![screen21](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work1/screen21.png)
+![screen22](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work1/screen22.png)
 
 
 ### Задание 2
