@@ -82,4 +82,4 @@
 
 ## Ссылка на мою работу в Google:
 
-[Моя работа по Zabbix](https://docs.google.com/document/d/1HskjyD9W_HNKI3BXPL3VlcHLB_2EXMF3/edit?usp=share_link&ouid=104113173630640462528&rtpof=true&sd=true)
+[Моя работа по Jenkins](https://docs.google.com/document/)
