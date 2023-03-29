@@ -225,20 +225,20 @@ docker exec -t nexus bash -c 'cat /nexus-data/admin.password && echo'
 
 Теперь нам нужно создать репозиторий хранения go - файлов, для чего переходим в режим конфигурации и жмем create repository:
 
-![screen1](https://github.com/KorolkovDenis/)
+![screen1](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work3/screen1.png)
 
 Выбираем raw (hosted)
 
-![screen2](https://github.com/KorolkovDenis/)
-![screen3](https://github.com/KorolkovDenis/)
+![screen2](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work3/screen2.png)
+![screen3](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work3/screen3.png)
 
 Далее в jenkins создаем новый pipeline: nexus_repo_go. Pipeline script будет такой:
 
-![screen4](https://github.com/KorolkovDenis/)
+![screen4](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work3/screen4.png)
 
 Запускаем сборку и получаем результат:
 
-![screen5](https://github.com/KorolkovDenis/)
+![screen5](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work3/screen5.png)
 
 ## Дополнительные задания* (со звёздочкой)
 
@@ -259,7 +259,7 @@ docker exec -t nexus bash -c 'cat /nexus-data/admin.password && echo'
 не вышло.
 
 
-## Более полная работа, со всеми неудачами по ходу выполнения по ссылке в Google:
+## Более полная работа, со всеми неудачами по ходу выполнения в Google:
 
 [Моя работа по Jenkins](https://docs.google.com/document/d/1S7XRWQkFn0lKEdqHfY3VVnEOXM-hrDsH/edit?usp=share_link&ouid=104113173630640462528&rtpof=true&sd=true)
 
