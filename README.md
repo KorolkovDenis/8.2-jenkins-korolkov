@@ -183,11 +183,14 @@ docker build . -t ubuntu-bionic:8082/hello-world:v$BUILD_NUMBER
 
 Последовательность выполнения:
 
-![screen3](https://github.com/KorolkovDenis/)
-
-![screen1](https://github.com/KorolkovDenis/)
-
-
+![screen1](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work2/screen1.png)
+![screen2](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work2/screen2.png)
+![screen3](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work2/screen3.png)
+![screen4](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work2/screen4.png)
+![screen5](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work2/screen5.png)
+![screen6](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work2/screen6.png)
+![screen7](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work2/screen7.png)
+![screen8](https://github.com/KorolkovDenis/8.2-jenkins-korolkov/blob/main/Screenshots/work2/screen8.png)
 
 
 ### Задание 3
@@ -207,7 +210,12 @@ docker build . -t ubuntu-bionic:8082/hello-world:v$BUILD_NUMBER
 
 Последовательность выполнения:
 
-
+![screen1](https://github.com/KorolkovDenis/)
+![screen1](https://github.com/KorolkovDenis/)
+![screen1](https://github.com/KorolkovDenis/)
+![screen1](https://github.com/KorolkovDenis/)
+![screen1](https://github.com/KorolkovDenis/)
+![screen1](https://github.com/KorolkovDenis/)
 
 ## Дополнительные задания* (со звёздочкой)
 
