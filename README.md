@@ -210,12 +210,35 @@ docker build . -t ubuntu-bionic:8082/hello-world:v$BUILD_NUMBER
 
 Последовательность выполнения:
 
+Запускаем Nexus на нашей хостовой машины, с помощью docker:
+
+docker run -d -p 192.168.43.234:8081:8081 -p 192.168.43.234:8082:8082 --name nexus -e INSTALL4J_ADD_VM_PARAMS="-Xms512m -Xmx512m -XX:MaxDirectMemorySize=273m" sonatype/nexus3
+
+192.168.43.234 - IP моего хоста
+192.168.43.234:8081 - по этому порту будем на nexus логиниться
+
+Вывести пароль администратора для первого логина в Nexus:
+
+docker exec -t nexus bash -c 'cat /nexus-data/admin.password && echo'
+
+224a7868-30e8-44da-8904-1f59e6f96ce7
+
+Теперь нам нужно создать репозиторий хранения go - файлов, для чего переходим в режим конфигурации и жмем create repository:
+
 ![screen1](https://github.com/KorolkovDenis/)
-![screen1](https://github.com/KorolkovDenis/)
-![screen1](https://github.com/KorolkovDenis/)
-![screen1](https://github.com/KorolkovDenis/)
-![screen1](https://github.com/KorolkovDenis/)
-![screen1](https://github.com/KorolkovDenis/)
+
+Выбираем raw (hosted)
+
+![screen2](https://github.com/KorolkovDenis/)
+![screen3](https://github.com/KorolkovDenis/)
+
+Далее в jenkins создаем новый pipeline: nexus_repo_go. Pipeline script будет такой:
+
+![screen4](https://github.com/KorolkovDenis/)
+
+Запускаем сборку и получаем результат:
+
+![screen5](https://github.com/KorolkovDenis/)
 
 ## Дополнительные задания* (со звёздочкой)
 
@@ -231,9 +254,12 @@ docker build . -t ubuntu-bionic:8082/hello-world:v$BUILD_NUMBER
 
 В качестве ответа пришлите скриншоты с настройками проекта и результатами выполнения сборки.
 
+Ответ:
+
+не вышло.
 
 
+## Более полная работа, со всеми неудачами по ходу выполнения по ссылке в Google:
 
-## Ссылка на мою работу в Google:
+[Моя работа по Jenkins](https://docs.google.com/document/d/1S7XRWQkFn0lKEdqHfY3VVnEOXM-hrDsH/edit?usp=share_link&ouid=104113173630640462528&rtpof=true&sd=true)
 
-[Моя работа по Jenkins](https://docs.google.com/document/)

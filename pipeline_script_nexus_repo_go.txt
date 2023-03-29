@@ -1,0 +1,23 @@
+pipeline {
+ agent any
+ stages {
+  stage('Git') {
+   steps {git url: 'https://github.com/KorolkovDenis/sdvps-materials.git', branch: 'main'}
+  }
+  stage('Test') {
+   steps {
+    sh '/usr/local/go/bin/go test .'
+   }
+  }
+  stage('Build') {
+   steps {
+    sh '/usr/local/go/bin/go build -a -installsuffix nocgo'
+   }
+  }
+  stage('Push') {
+   steps {
+    sh 'curl -u admin:admin http://192.168.43.234:8081/repository/Repo_go/ --upload-file ./sdvps-materials'
+   }
+  }
+ }
+}
