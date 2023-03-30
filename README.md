@@ -256,7 +256,13 @@ docker exec -t nexus bash -c 'cat /nexus-data/admin.password && echo'
 
 Ответ:
 
-не вышло.
+Заметки от преподавателя:
+
+Сейчас у вас достаточно сделано для зачета. Но, оставлю тут в качестве примера взаимодействие с переменными:
+
+CGO_ENABLED=0 GOOS=linux /usr/local/go/bin/go build -o v$BUILD_NUMBER:$GIT_COMMIT:$GIT_BRANCH:outfile.go
+
+curl -v -u admin:admin http://192.168.56.10:8081/repository/raw1/ --upload-file v$BUILD_NUMBER:$GIT_COMMIT:$GIT_BRANCH:outfile.go
 
 
 ## Более полная работа, со всеми неудачами по ходу выполнения в Google:
